@@ -17,7 +17,7 @@ public class Knight extends ChessPiece {
     }
 
     private boolean canMove(Position position) {
-        ChessPiece p = (ChessPiece)getBoard().piece(position);
+        ChessPiece p = (ChessPiece) getBoard().piece(position);
         return p == null || p.getColor() != getColor();
     }
 
@@ -37,7 +37,7 @@ public class Knight extends ChessPiece {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        p.setValues(position.getRow() -2, position.getColumn() +  1);
+        p.setValues(position.getRow() - 2, position.getColumn() + 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
@@ -66,7 +66,6 @@ public class Knight extends ChessPiece {
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
-
 
 
         return mat;
